@@ -1,0 +1,12 @@
+ case 'Buku-delete':
+                                $id = $_GET['id'];
+                                $row = mysqli_fetch_assoc($lib->getDataId('buku', $id));
+                                unlink('assets/img/Buku/' . $row['sampul']);
+                                $hapus = $lib->hapus('buku', $id);
+                                if ($hapus == true) {
+                                    header('location: ?page=Buku');
+                                } else {
+                                    header('location: ?page=Buku');
+                                }
+                                break;
+
