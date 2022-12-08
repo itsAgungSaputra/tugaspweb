@@ -1,9 +1,12 @@
 <?php
 require_once 'helper/connection.php';
 
-$id_hotel = $_GET['id_hotel'];
-$result = mysqli_query($con, "SELECT * FROM hotel WHERE id_hotel = '$id_hotel'");
-$row = mysqli_fetch_array($result);
+$id = $_GET['id_hotel'];
+$sql_hotel = "SELECT * FROM hotel WHERE id_hotel = $id";
+
+$all_hotel = $con->query($sql_hotel);
+// $result = mysqli_query($con, "SELECT * FROM hotel WHERE id_hotel = '$id_hotel'");
+$row_hotel = mysqli_fetch_assoc($all_hotel);
 ?>
 
 <!DOCTYPE html>
@@ -71,10 +74,7 @@ $row = mysqli_fetch_array($result);
             <div class="container">
 
                 <div class="d-flex justify-content-between align-items-center">
-                    <h2><?= $row['nama_hotel']; ?></h2>
-                    <ol>
-                        <li>Destinasi Wisata Di <?= $row['nama_hotel']; ?></li>
-                    </ol>
+                    <h2 style="font-size: 45px;"><?= $row_hotel['nama_hotel']; ?></h2>
                 </div>
 
             </div>
@@ -87,27 +87,32 @@ $row = mysqli_fetch_array($result);
         <section class="service-details">
             <div class="container">
 
-                <div class="row">
-                    <?php
-                    $i = 0;
-                    while ($row = mysqli_fetch_assoc($result)) {
-                    ?>
-                        <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
-                            <div class="card">
-                                <div class="card-img">
-                                    <img src="assets/img/hotel/<?= $row['foto']; ?>" alt="...">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title"><a href="#"><?= $row['nama_hotel']; ?></a></h5>
-                                    <p class="card-text"><?= $row['deskripsi']; ?></p>
-                                    <div class="read-more"><a href="https://www.google.com/maps/place/Jl.+Sutoyo,+Biawao,+Kota+Sel.,+Kota+Gorontalo,+Gorontalo/@0.5350561,123.0595273,17z/data=!3m1!4b1!4m5!3m4!1s0x32792ade8a89d7f1:0x2e661bea63b0a8ae!8m2!3d0.5350561!4d123.0595273"><i class="bi bi-arrow-right"></i> Jl. Sutoyo, Biawao, Kota Sel., Kota Gorontalo, Gorontalo, Indonesia</a>
-                                    </div>
+                <div class="row" data-aos="fade-up">
+                    <div class="col-md-5">
+                        <img src="assets/img/hotel/<?= $row_hotel['foto']; ?>" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-7">
+                        <p>
+                            <?= $row_hotel['deskripsi']; ?>
+                        </p>
+                        <div class="read-more pb-4" style="color: ;">
+                            <i class="bi bi-arrow-right"></i> <?= $row_hotel['alamat']; ?>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-12 d-flex align-items-stretch" data-aos="fade-up">
+                        <div class="card">
+                            <div class="card-img align-center">
+                                <img src="assets/img/hotel/" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="#"></a></h5>
+                                <p class="card-text"></p>
+                                <div class="read-more"><a href="https://www.google.com/maps/place/Jl.+Sutoyo,+Biawao,+Kota+Sel.,+Kota+Gorontalo,+Gorontalo/@0.5350561,123.0595273,17z/data=!3m1!4b1!4m5!3m4!1s0x32792ade8a89d7f1:0x2e661bea63b0a8ae!8m2!3d0.5350561!4d123.0595273"><i class="bi bi-arrow-right"></i> Jl. Sutoyo, Biawao, Kota Sel., Kota Gorontalo, Gorontalo, Indonesia</a>
                                 </div>
                             </div>
                         </div>
+                    </div> -->
                     <?php
-                        $i++;
-                    }
                     ?>
                 </div>
 
@@ -124,7 +129,7 @@ $row = mysqli_fetch_array($result);
                     &copy; Copyright <strong><span>Kelompok PWEB</span></strong>
                 </div>
                 <div class="credits">
-                    Designed by <a href="https://www.instagram.com/artajgmn/?next=%2F&hl=id">Uta Ganteng</a>
+                    Created by <a href="https://www.instagram.com/agungsaputragram/">Agung Saputra</a>
                 </div>
             </div>
         </footer><!-- End Footer -->

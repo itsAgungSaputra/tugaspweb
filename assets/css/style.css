@@ -1,15 +1,5 @@
-/**
-* Template Name: Moderna - v4.10.1
-* Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: Helvetica, "Open Sans", sans-serif;
   color: #444;
 }
 
@@ -29,8 +19,8 @@ h3,
 h4,
 h5,
 h6,
-.font-primary {
-  font-family: "Roboto", sans-serif;
+.font-primary, {
+  font-family: Helvetica, "Roboto", sans-serif;
 }
 
 /*--------------------------------------------------------------

@@ -29,7 +29,7 @@ if ($foto != "") {
 			$nama_gambar_baru = $row['foto'];
 		}
 
-		$query = "UPDATE destinasi SET nama_destinasi = '$nama_destinasi', deskripsi= '$deskripsi', alamat= '$alamat' foto = '$nama_gambar_baru', id_kabkot= '$id_kabkot' ";
+		$query = "UPDATE destinasi SET nama_destinasi = '$nama_destinasi', deskripsi= '$deskripsi', alamat= '$alamat', foto = '$nama_gambar_baru', id_kabkot= '$id_kabkot' ";
 		$query .= "WHERE id_destinasi = '$id_destinasi'";
 		$result = mysqli_query($con, $query);
 

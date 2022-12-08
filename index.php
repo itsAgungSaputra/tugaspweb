@@ -113,7 +113,7 @@ $row_destinasi = mysqli_fetch_assoc($all_destinasi);
               </div>
               <div class="col-md-4 pt-4">
                 <h4 class="title"><a href="kabkot_detail.php?id=<?= $row_destinasi['id_kabkot']; ?>"><?= $row['nama_kabkot']; ?></a></h4>
-                <p class="fst-italic">
+                <p>
                   <?= $row['deskripsi']; ?>
                 </p>
               </div>
@@ -146,7 +146,7 @@ $row_destinasi = mysqli_fetch_assoc($all_destinasi);
                       <div class="card h-100 shadow border-0">
                         <img class="card-img-top img-hotel" height="150px" src="assets/img/hotel/<?= $row_hotel['foto']; ?>" alt="..." />
                         <div class="card-body p-4">
-                          <a class="text-decoration-none link-dark stretched-link" href="hotel_detail.php?id=<?= $row_hotel['id_hotel']; ?>">
+                          <a class="text-decoration-none link-dark stretched-link" href="hotel_detail.php?id_hotel=<?= $row_hotel['id_hotel']; ?>">
                             <h5 class="card-title mb-3"><?= $row_hotel['nama_hotel']; ?></h5>
                           </a>
                         </div>
@@ -228,7 +228,7 @@ $row_destinasi = mysqli_fetch_assoc($all_destinasi);
         &copy; Copyright <strong><span>Kelompok PWEB</span></strong>
       </div>
       <div class="credits">
-        Designed by <a href="https://www.instagram.com/artajgmn/?next=%2F&hl=id">Uta Ganteng</a>
+        Created by <a href="https://www.instagram.com/agungsaputragram/">Agung Saputra</a>
       </div>
     </div>
   </footer><!-- End Footer -->

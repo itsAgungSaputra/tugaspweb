@@ -76,7 +76,7 @@ $all_destinasi = $con->query($sql_destinasi);
             <div class="container">
 
                 <div class="d-flex justify-content-between align-items-center">
-                    <h2><?= $row_kabkot['nama_kabkot']; ?></h2>
+                    <h2 style="font-size: 45px;"><?= $row_kabkot['nama_kabkot']; ?></h2>
                     <ol>
                         <li>Destinasi Wisata Di <?= $row_kabkot['nama_kabkot']; ?></li>
                     </ol>
@@ -129,7 +129,7 @@ $all_destinasi = $con->query($sql_destinasi);
                     &copy; Copyright <strong><span>Kelompok PWEB</span></strong>
                 </div>
                 <div class="credits">
-                    Designed by <a href="https://www.instagram.com/artajgmn/?next=%2F&hl=id">Uta Ganteng</a>
+                    Created by <a href="https://www.instagram.com/agungsaputragram/">Agung Saputra</a>
                 </div>
             </div>
         </footer><!-- End Footer -->
