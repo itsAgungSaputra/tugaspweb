@@ -29,6 +29,14 @@
   height: 175px;
 } */
 
+div.hotel {
+  transition: transform 0.2s;
+}
+
+div.hotel:hover {
+  transform: scale(1.2);
+}
+
 .stack {
   display: grid;
   grid-template-areas: "stack";

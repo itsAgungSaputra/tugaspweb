@@ -60,7 +60,8 @@ $row_destinasi = mysqli_fetch_assoc($all_destinasi);
       </div>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="active " href="index.php">Home</a></li>
+          <li><a <?php if($_GET['page']="/index"){ ?> class="active" <?php } ?> href="index.php">Home</a></li>
+          <li><a <?php if($_GET['page']="/destinasi"){ ?> class="active" <?php } ?> href="destinasi.php">Destinasi</a></li>
           <!-- <li><a href="portfolio.php">Galeri Wisata</a></li> -->
           <!-- <li><a href="team.php">Kuliner</a></li> -->
 
@@ -143,7 +144,7 @@ $row_destinasi = mysqli_fetch_assoc($all_destinasi);
                   while ($row_hotel = mysqli_fetch_assoc($all_hotel)) {
                   ?>
                     <div class="col-lg-3 mb-5">
-                      <div class="card h-100 shadow border-0">
+                      <div class="card h-100 shadow border-0 hotel">
                         <img class="card-img-top img-hotel" height="150px" src="assets/img/hotel/<?= $row_hotel['foto']; ?>" alt="..." />
                         <div class="card-body p-4">
                           <a class="text-decoration-none link-dark stretched-link" href="hotel_detail.php?id_hotel=<?= $row_hotel['id_hotel']; ?>">

@@ -42,7 +42,7 @@ $total_hotel = mysqli_fetch_array($hotel)[0];
                         </div>
                     </div>
                     <div class="col-auto">
-                        <i class="fas fa-user fa-2x text-gray-300"></i>
+                        <i class="fas fa-users fa-2x text-gray-300"></i>
                     </div>
                 </div>
             </div>

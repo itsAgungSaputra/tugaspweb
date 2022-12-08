@@ -1,14 +1,8 @@
 <?php
 require_once 'helper/connection.php';
-$id = $_GET['id'];
-$sql_kabkot = "SELECT * FROM kabkot WHERE id_kabkot = $id";
 
-$all_kabkot = $con->query($sql_kabkot);
-$row_kabkot = mysqli_fetch_assoc($all_kabkot);
-$idtes = $row_kabkot['id_kabkot'];
-$sql_destinasi = "SELECT * FROM destinasi WHERE id_kabkot = $id";
+$sql_destinasi = "SELECT * FROM destinasi";
 $all_destinasi = $con->query($sql_destinasi);
-
 ?>
 
 <!DOCTYPE html>
@@ -76,10 +70,7 @@ $all_destinasi = $con->query($sql_destinasi);
             <div class="container">
 
                 <div class="d-flex justify-content-between align-items-center">
-                    <h2 style="font-size: 45px;"><?= $row_kabkot['nama_kabkot']; ?></h2>
-                    <ol>
-                        <li>Destinasi Wisata Di <?= $row_kabkot['nama_kabkot']; ?></li>
-                    </ol>
+                    <h2 style="font-size: 45px;">All Destination</h2>
                 </div>
 
             </div>

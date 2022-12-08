@@ -23,13 +23,13 @@
 
     <!-- Heading -->
     <div class="sidebar-heading">
-        Master Data
+        Interface
     </div>
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link" href="../pengguna/index.php">
-            <i class="fas fa-fw fa-cog"></i>
+            <i class="fas fa-fw fa-users"></i>
             <span>Pengguna</span>
         </a>
     </li>

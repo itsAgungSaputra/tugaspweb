@@ -96,7 +96,7 @@ $row_hotel = mysqli_fetch_assoc($all_hotel);
                             <?= $row_hotel['deskripsi']; ?>
                         </p>
                         <div class="read-more pb-4" style="color: ;">
-                            <i class="bi bi-arrow-right"></i> <?= $row_hotel['alamat']; ?>
+                            <i class="bi bi-geo-alt"></i> <?= $row_hotel['alamat']; ?>
                         </div>
                     </div>
                     <!-- <div class="col-md-12 d-flex align-items-stretch" data-aos="fade-up">

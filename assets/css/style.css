@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;800;900&family=Roboto:wght@300;400;700;900&display=swap');
+
 body {
-  font-family: Helvetica, "Open Sans", sans-serif;
+  font-family: "Roboto", "Open Sans", sans-serif;
   color: #444;
 }
 
@@ -19,8 +21,12 @@ h3,
 h4,
 h5,
 h6,
-.font-primary, {
-  font-family: Helvetica, "Roboto", sans-serif;
+.font-primary {
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-family: "Helvetica", "Poppins", sans-serif;
 }
 
 /*--------------------------------------------------------------
