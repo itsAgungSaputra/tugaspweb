@@ -33,19 +33,19 @@ $row = mysqli_fetch_array($result);
                         <input type="text" name="id_hotel" class="form-control" id="id_hotel" value="<?= $row['id_hotel'] ?>">
                     </div>
                     <div class="form-group">
-                        <label for="nama_hotel">Nama</label>
+                        <label for="nama_hotel"><strong>Nama Hotel</strong></label>
                         <input type="text" name="nama_hotel" class="form-control" id="nama_hotel" value="<?= $row['nama_hotel'] ?>">
                     </div>
                     <div class="form-group">
-                        <label for="deskripsi">Deskripsi</label>
+                        <label for="deskripsi"><strong>Deskripsi</strong></label>
                         <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3"><?= $row['deskripsi']; ?></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="alamat">Alamat</label>
+                        <label for="alamat"><strong>Alamat</strong></label>
                         <input type="text" name="alamat" class="form-control" id="alamat" value="<?= $row['alamat'] ?>">
                     </div>
                     <div class="form-group">
-                        <label for="foto">Foto</label>
+                        <label for="foto"><strong>Foto</strong></label>
                         <input type="file" onchange="ubahgambar(event)" name="foto" id="foto" class="form-control-file" accept=" .jpg, .jpeg, .png">
                     </div>
                 </div>

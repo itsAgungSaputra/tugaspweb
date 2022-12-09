@@ -7,7 +7,7 @@ if (!isset($_SESSION['nama'])) {
 require_once '../helper/connection.php';
 $id_destinasi = $_GET['id_destinasi'];
 $result = mysqli_query($con, "SELECT * FROM destinasi WHERE id_destinasi = '$id_destinasi'");
-$result_kabkot= mysqli_query($con, "SELECT * FROM kabkot");
+$result_kabkot = mysqli_query($con, "SELECT * FROM kabkot");
 $row = mysqli_fetch_array($result);
 ?>
 
@@ -33,19 +33,19 @@ $row = mysqli_fetch_array($result);
                         <input type="text" name="id_destinasi" class="form-control" id="id_destinasi" value="<?= $row['id_destinasi'] ?>">
                     </div>
                     <div class="form-group">
-                        <label for="nama_destinasi">Nama Destinasi</label>
+                        <label for="nama_destinasi"><strong>Nama Destinasi</strong></label>
                         <input type="text" name="nama_destinasi" class="form-control" id="nama_destinasi" value="<?= $row['nama_destinasi'] ?>">
                     </div>
                     <div class="form-group">
-                        <label for="deskripsi">Deskripsi</label>
+                        <label for="deskripsi"><strong>Deskripsi</strong></label>
                         <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3"><?= $row['deskripsi']; ?></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="alamat">Alamat</label>
+                        <label for="alamat"><strong>Alamat</strong></label>
                         <input type="text" name="alamat" class="form-control" id="alamat" value="<?= $row['alamat'] ?>">
                     </div>
                     <div class="form-group">
-                        <label for="foto">Foto</label>
+                        <label for="foto"><strong>Foto</strong></label>
                         <input type="file" onchange="ubahgambar(event)" name="foto" id="foto" class="form-control-file" accept=" .jpg, .jpeg, .png">
                     </div>
                     <div class="form-group">
@@ -54,9 +54,7 @@ $row = mysqli_fetch_array($result);
                             <?php
                             while ($row_kabkot = mysqli_fetch_array($result_kabkot)) {
                             ?>
-                                <option value="<?php echo $row_kabkot['id_kabkot']; ?>" 
-                                    <?php echo $row_kabkot['id_kabkot']== $row['id_kabkot']?"selected":""; ?>
-                                    >
+                                <option value="<?php echo $row_kabkot['id_kabkot']; ?>" <?php echo $row_kabkot['id_kabkot'] == $row['id_kabkot'] ? "selected" : ""; ?>>
                                     <?php echo $row_kabkot['nama_kabkot']; ?>
                                 </option>
                             <?php } ?>

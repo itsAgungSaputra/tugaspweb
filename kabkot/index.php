@@ -46,8 +46,8 @@ $result = mysqli_query($con, "SELECT * FROM kabkot");
                                 <img width="100px" src="../assets/img/kabkot/<?= $row['foto']; ?>">
                             </td>
                             <td>
-                                <a class="btn btn-warning btn-sm" href="edit.php?id_kabkot=<?php echo $row['id_kabkot']; ?>"><i class="fas fa-edit"></i></a>
-                                <a class="btn btn-danger btn-sm" href="delete.php?id_kabkot=<?php echo $row['id_kabkot']; ?>" onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')"><i class="fas fa-trash"></i></a>
+                                <a class="btn btn-warning btn-sm rounded-circle" href="edit.php?id_kabkot=<?php echo $row['id_kabkot']; ?>"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-danger btn-sm rounded-circle" href="delete.php?id_kabkot=<?php echo $row['id_kabkot']; ?>" onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
                     <?php } ?>

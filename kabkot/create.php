@@ -19,7 +19,7 @@ if (!isset($_SESSION['nama'])) {
         <form action="store.php" method="POST" enctype="multipart/form-data">
             <a class="btn btn-secondary btn-sm mb-4" href="index.php"><i class="fas fa-arrow-left"></i> Kembali</a>
             <div class="form-group row">
-                <label for="nama_kabkot" class="col-sm-2 form-label"><strong>Nama</strong></label>
+                <label for="nama_kabkot" class="col-sm-2 form-label"><strong>Nama Kabupaten/Kota</strong></label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" name="nama_kabkot" id="nama_kabkot" autofocus required>
                 </div>

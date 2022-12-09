@@ -39,15 +39,15 @@ $row = mysqli_fetch_array($result);
                         <input type="text" name="id_kabkot" class="form-control" id="id_kabkot" value="<?= $row['id_kabkot'] ?>">
                     </div>
                     <div class="form-group">
-                        <label for="nama_kabkot">Nama</label>
+                        <label for="nama_kabkot"><strong>Nama Kabupaten/Kota</strong></label>
                         <input type="text" name="nama_kabkot" class="form-control" id="nama_kabkot" value="<?= $row['nama_kabkot'] ?>">
                     </div>
                     <div class="form-group">
-                        <label for="deskripsi">Deskripsi</label>
+                        <label for="deskripsi"><strong>Deskripsi</strong></label>
                         <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3"><?= $row['deskripsi']; ?></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="foto">Foto</label>
+                        <label for="foto"><strong>Foto</strong></label>
                         <input type="file" onchange="ubahgambar(event)" name="foto" id="foto" class="form-control-file" accept=" .jpg, .jpeg, .png">
                     </div>
                 </div>
