@@ -2,8 +2,6 @@
 $dbhost = "localhost";
 $dbusername = "root";
 $dbpassword = "";
-$dbname = "tugaspweb";
+$dbname = "webwisata";
 
 $con = mysqli_connect($dbhost, $dbusername, $dbpassword, $dbname);
-
-?>

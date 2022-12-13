@@ -19,7 +19,7 @@ $row = mysqli_fetch_array($result);
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Edit Destinasi</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Edit Data Destinasi "<?= $row['nama_destinasi'] ?>"</h6>
     </div>
     <div class="card-body">
         <form action="update.php" method="POST" enctype="multipart/form-data">

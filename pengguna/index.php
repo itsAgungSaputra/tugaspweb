@@ -41,8 +41,8 @@ $result = mysqli_query($con, "SELECT * FROM pengguna");
                             <td><?= $no++; ?></td>
                             <td><?= $data['nama']; ?></td>
                             <td><?= $data['username']; ?></td>
-                            <td><a class="btn btn-warning btn-sm" href="edit.php?id=<?php echo $data['id']; ?>&nama=<?= $data['nama']; ?>&username=<?= $data['username']; ?>"><i class="fas fa-edit"></i></a>
-                                <a class="btn btn-danger btn-sm" href="delete.php?id=<?= $data['id']; ?>" onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')"><i class="fas fa-trash"></i></a>
+                            <td><a class="btn btn-warning btn-sm" href="edit.php?id=<?= $data['id']; ?>&nama=<?= $data['nama']; ?>&username=<?= $data['username']; ?>"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-danger btn-sm" href="delete.php?id=<?= $data['id']; ?>" onclick="return confirm('Ingin Menghapus Data Ini?')"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
                     <?php } ?>

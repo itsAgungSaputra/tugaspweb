@@ -2,11 +2,11 @@
 
 require_once '../helper/connection.php';
 
-$result = mysqli_query($con, "SELECT * FROM hotel");
+$result = mysqli_query($con, "SELECT * FROM kuliner");
 $row = mysqli_fetch_array($result);
 
-$id_hotel = $_POST['id_hotel'];
-$nama_hotel = $_POST['nama_hotel'];
+$id = $_POST['id'];
+$nama = $_POST['nama'];
 $deskripsi = $_POST['deskripsi'];
 $alamat = $_POST['alamat'];
 $foto = $_FILES["foto"]["name"];
@@ -21,15 +21,15 @@ if ($foto != "") {
 	// $nama_gambar_baru = $angka_acak . '-' . $foto;
 
 	if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
-		$moved = move_uploaded_file($file_tmp, '../assets/img/hotel/' . $nama_gambar_baru);
+		$moved = move_uploaded_file($file_tmp, '../assets/img/kuliner/' . $nama_gambar_baru);
 		if ($moved) {
-			unlink('../assets/img/hotel/' . $row['foto']);
+			unlink('../assets/img/kuliner/' . $row['foto']);
 		} else {
 			$nama_gambar_baru = $row['foto'];
 		}
 
-		$query = "UPDATE hotel SET nama_hotel = '$nama_hotel', deskripsi= '$deskripsi', alamat= '$alamat', foto = '$nama_gambar_baru' ";
-		$query .= "WHERE id_hotel = '$id_hotel'";
+		$query = "UPDATE kuliner SET nama = '$nama', deskripsi= '$deskripsi', foto = '$nama_gambar_baru' ";
+		$query .= "WHERE id = '$id'";
 		$result = mysqli_query($con, $query);
 
 		if (!$result) {
@@ -41,8 +41,8 @@ if ($foto != "") {
 		echo "<script>alert('Ekstensi gambar hanya bisa jpg, jpeg, dan png!');window.location.href='edit.php';</script>";
 	}
 } else {
-	$query = "UPDATE hotel SET nama_hotel = '$nama_hotel', deskripsi= '$deskripsi', alamat= '$alamat' ";
-	$query .= "WHERE id_hotel = '$id_hotel'";
+	$query = "UPDATE kuliner SET nama = '$nama', deskripsi= '$deskripsi' ";
+	$query .= "WHERE id = '$id'";
 	$result = mysqli_query($con, $query);
 
 	if (!$result) {

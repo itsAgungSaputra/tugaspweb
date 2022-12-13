@@ -49,7 +49,7 @@ $result = mysqli_query($con, "SELECT * FROM hotel");
                             </td>
                             <td>
                                 <a class="btn btn-warning btn-sm rounded-circle" href="edit.php?id_hotel=<?php echo $row['id_hotel']; ?>"><i class="fas fa-edit"></i></a>
-                                <a class="btn btn-danger btn-sm rounded-circle" href="delete.php?id_hotel=<?php echo $row['id_hotel']; ?>" onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')"><i class="fas fa-trash"></i></a>
+                                <a class="btn btn-danger btn-sm rounded-circle" href="delete.php?id_hotel=<?php echo $row['id_hotel']; ?>" onclick="return confirm('Ingin Menghapus Data Ini?')"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
                     <?php } ?>

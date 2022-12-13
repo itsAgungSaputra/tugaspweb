@@ -6,13 +6,13 @@ if (!isset($_SESSION['nama'])) {
 
 require_once '../helper/connection.php';
 
-$result = mysqli_query($con, "SELECT * FROM kabkot");
+$result = mysqli_query($con, "SELECT * FROM kuliner");
 ?>
 
 <?php require_once '../layouts/header.php'; ?>
 
 <!-- Page Heading -->
-<h1 class="h3 mb-2 text-gray-800">Kabupaten/Kota</h1>
+<h1 class="h3 mb-2 text-gray-800">Kuliner</h1>
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
@@ -40,14 +40,14 @@ $result = mysqli_query($con, "SELECT * FROM kabkot");
                     ?>
                         <tr>
                             <td><?= $no++; ?></td>
-                            <td><?= $row['nama_kabkot']; ?></td>
+                            <td><?= $row['nama']; ?></td>
                             <td><?= $row['deskripsi']; ?></td>
                             <td>
-                                <img width="100px" src="../assets/img/kabkot/<?= $row['foto']; ?>">
+                                <img width="100px" src="../assets/img/kuliner/<?= $row['foto']; ?>">
                             </td>
                             <td>
-                                <a class="btn btn-warning btn-sm rounded-circle" href="edit.php?id_kabkot=<?php echo $row['id_kabkot']; ?>"><i class="fas fa-edit"></i></a>
-                                <a class="btn btn-danger btn-sm rounded-circle" href="delete.php?id_kabkot=<?php echo $row['id_kabkot']; ?>" onclick="return confirm('Ingin Menghapus Data Ini?')"><i class="fas fa-trash"></i></a>
+                                <a class="btn btn-warning btn-sm rounded-circle" href="edit.php?id=<?php echo $row['id']; ?>"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-danger btn-sm rounded-circle" href="delete.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Ingin Menghapus Data Ini?')"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
                     <?php } ?>

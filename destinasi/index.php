@@ -51,7 +51,7 @@ $result = mysqli_query($con, "SELECT destinasi.*,kabkot.nama_kabkot FROM destina
                             <td><?= $data['nama_kabkot']; ?></td>
                             <td>
                                 <a class="btn btn-warning btn-sm rounded-circle" href="edit.php?id_destinasi=<?php echo $data['id_destinasi']; ?>"><i class="fas fa-edit"></i></a>
-                                <a class="btn btn-danger btn-sm rounded-circle" href="delete.php?id_destinasi=<?php echo $data['id_destinasi']; ?>" onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')"><i class="fas fa-trash"></i></a>
+                                <a class="btn btn-danger btn-sm rounded-circle" href="delete.php?id_destinasi=<?php echo $data['id_destinasi']; ?>" onclick="return confirm('Ingin Menghapus Data Ini?')"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
                     <?php } ?>

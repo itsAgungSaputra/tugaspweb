@@ -13,7 +13,7 @@
     <hr class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item">
+    <li class="nav-item <?php if ($_SERVER['PHP_SELF'] == "/webwisata/dashboard/index.php") { ?> active <?php } ?>">
         <a class="nav-link" href="../dashboard/index.php">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
@@ -23,35 +23,51 @@
 
     <!-- Heading -->
     <div class="sidebar-heading">
-        Interface
+        Admin
     </div>
 
     <!-- Nav Item - Pages Collapse Menu -->
-    <li class="nav-item">
-        <a class="nav-link" href="../pengguna/index.php">
+    <li class="nav-item  <?php if ($_SERVER['PHP_SELF'] == "/webwisata/pengguna/index.php") { ?> active <?php } ?>">
+        <a class="nav-link active" href="../pengguna/index.php">
             <i class="fas fa-fw fa-users"></i>
             <span>Pengguna</span>
         </a>
     </li>
 
-    <li class="nav-item">
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Menu
+    </div>
+
+    <li class="nav-item <?php if ($_SERVER['PHP_SELF'] == "/webwisata/kabkot/index.php") { ?> active <?php } ?>">
         <a class="nav-link" href="../kabkot/index.php">
             <i class="fas fa-fw fa-building"></i>
             <span>Kabupaten/Kota</span>
         </a>
     </li>
 
-    <li class="nav-item">
+    <li class="nav-item  <?php if ($_SERVER['PHP_SELF'] == "/webwisata/destinasi/index.php") { ?> active <?php } ?>">
         <a class="nav-link" href="../destinasi/index.php">
             <i class="fas fa-fw fa-plane"></i>
             <span>Destinasi</span>
         </a>
     </li>
 
-    <li class="nav-item">
+    <li class="nav-item <?php if ($_SERVER['PHP_SELF'] == "/webwisata/hotel/index.php") { ?> active <?php } ?>">
         <a class="nav-link" href="../hotel/index.php">
             <i class="fas fa-fw fa-hotel"></i>
             <span>Hotel</span>
+        </a>
+    </li>
+
+    <li class="nav-item <?php if ($_SERVER['PHP_SELF'] == "/webwisata/kuliner/index.php") { ?> active <?php } ?>">
+        <a class="nav-link" href="../kuliner/index.php">
+            <i class="fas fa-fw fa-utensils"></i>
+            <span>Kuliner</span>
         </a>
     </li>
 

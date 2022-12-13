@@ -30,11 +30,11 @@
 } */
 
 div.hotel {
-  transition: transform 0.2s;
+  transition: 0.3s;
 }
 
 div.hotel:hover {
-  transform: scale(1.2);
+  transform: translate(0, -10px);
 }
 
 .stack {

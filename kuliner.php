@@ -1,8 +1,8 @@
 <?php
 require_once 'helper/connection.php';
 
-$sql_destinasi = "SELECT * FROM destinasi";
-$all_destinasi = $con->query($sql_destinasi);
+$sql_kuliner = "SELECT * FROM kuliner";
+$all_kuliner = $con->query($sql_kuliner);
 ?>
 
 <!DOCTYPE html>
@@ -70,7 +70,7 @@ $all_destinasi = $con->query($sql_destinasi);
             <div class="container">
 
                 <div class="d-flex justify-content-between align-items-center">
-                    <h2 style="font-size: 45px;">All Destination</h2>
+                    <h2 style="font-size: 45px;">Kuliner</h2>
                 </div>
 
             </div>
@@ -86,18 +86,16 @@ $all_destinasi = $con->query($sql_destinasi);
                 <div class="row">
                     <?php
                     $i = 0;
-                    while ($row = mysqli_fetch_assoc($all_destinasi)) {
+                    while ($row = mysqli_fetch_assoc($all_kuliner)) {
                     ?>
                         <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
                             <div class="card">
                                 <div class="card-img">
-                                    <img src="assets/img/destinasi/<?= $row['foto']; ?>" alt="...">
+                                    <img src="assets/img/kuliner/<?= $row['foto']; ?>" alt="..." style="height: 75%;">
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title"><a href="#"><?= $row['nama_destinasi']; ?></a></h5>
+                                    <h5 class="card-title"><a href="#"><?= $row['nama']; ?></a></h5>
                                     <p class="card-text"><?= $row['deskripsi']; ?></p>
-                                    <div class="read-more"><a href=""><i class="bi bi-geo-alt"></i> <?= $row['alamat']; ?></a>
-                                    </div>
                                 </div>
                             </div>
                         </div>

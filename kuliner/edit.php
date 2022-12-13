@@ -6,43 +6,39 @@ if (!isset($_SESSION['nama'])) {
 
 require_once '../helper/connection.php';
 
-$id_hotel = $_GET['id_hotel'];
-$result = mysqli_query($con, "SELECT * FROM hotel WHERE id_hotel = '$id_hotel'");
+$id = $_GET['id'];
+$result = mysqli_query($con, "SELECT * FROM kuliner WHERE id = '$id'");
 $row = mysqli_fetch_array($result);
 ?>
 
 <?php require_once '../layouts/header.php'; ?>
 
 <!-- Page Heading -->
-<h1 class="h3 mb-2 text-gray-800">Hotel</h1>
+<h1 class="h3 mb-2 text-gray-800">Kuliner</h1>
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Edit Data Hotel "<?= $row['nama_hotel'] ?>"</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Edit Data Kuliner "<?= $row['nama'] ?>"</h6>
     </div>
     <div class="card-body">
         <form action="update.php" method="POST" enctype="multipart/form-data">
             <a class="btn btn-secondary btn-sm mb-4" href="index.php"><i class="fas fa-arrow-left"></i> Kembali</a>
             <div class="row">
                 <div class="col-auto">
-                    <img id="foto" width="250px" src="../assets/img/hotel/<?= $row['foto']; ?>" alt="">
+                    <img id="foto" width="250px" src="../assets/img/kuliner/<?= $row['foto']; ?>" alt="">
                 </div>
                 <div class="col">
                     <div class="form-group" style="display: none;">
-                        <input type="text" name="id_hotel" class="form-control" id="id_hotel" value="<?= $row['id_hotel'] ?>">
+                        <input type="text" name="id" class="form-control" id="id" value="<?= $row['id'] ?>">
                     </div>
                     <div class="form-group">
-                        <label for="nama_hotel"><strong>Nama Hotel</strong></label>
-                        <input type="text" name="nama_hotel" class="form-control" id="nama_hotel" value="<?= $row['nama_hotel'] ?>">
+                        <label for="nama"><strong>Nama</strong></label>
+                        <input type="text" name="nama" class="form-control" id="nama" value="<?= $row['nama'] ?>">
                     </div>
                     <div class="form-group">
                         <label for="deskripsi"><strong>Deskripsi</strong></label>
                         <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3"><?= $row['deskripsi']; ?></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="alamat"><strong>Alamat</strong></label>
-                        <input type="text" name="alamat" class="form-control" id="alamat" value="<?= $row['alamat'] ?>">
                     </div>
                     <div class="form-group">
                         <label for="foto"><strong>Foto</strong></label>

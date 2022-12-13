@@ -39,9 +39,9 @@ $row_destinasi = mysqli_fetch_assoc($all_destinasi);
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- css -->
+  <!-- CSS -->
   <link href="assets/css/style.css" rel="stylesheet">
-  <link href="css/my_styles.css" rel="stylesheet">
+  <link href="assets/css/my_styles.css" rel="stylesheet">
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
 
 
@@ -60,10 +60,10 @@ $row_destinasi = mysqli_fetch_assoc($all_destinasi);
       </div>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a <?php if($_GET['page']="/index"){ ?> class="active" <?php } ?> href="index.php">Home</a></li>
-          <li><a <?php if($_GET['page']="/destinasi"){ ?> class="active" <?php } ?> href="destinasi.php">Destinasi</a></li>
+          <li><a <?php if ($_SERVER['PHP_SELF'] == "/webwisata/index.php") { ?> class="active" <?php } ?> href="index.php">Home</a></li>
+          <li><a <?php if ($_SERVER['PHP_SELF'] == "/webwisata/destinasi.php") { ?> class="active" <?php } ?> href="destinasi.php">Destinasi</a></li>
+          <li><a <?php if ($_SERVER['PHP_SELF'] == "/webwisata/kuliner.php") { ?> class="active" <?php } ?> href="kuliner.php">Kuliner</a></li>
           <!-- <li><a href="portfolio.php">Galeri Wisata</a></li> -->
-          <!-- <li><a href="team.php">Kuliner</a></li> -->
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

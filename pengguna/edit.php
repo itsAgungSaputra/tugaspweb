@@ -13,7 +13,7 @@ if (!isset($_SESSION['nama'])) {
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Edit Pengguna</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Edit Data Pengguna "<?= $_GET['nama']; ?>"</h6>
     </div>
     <div class="card-body">
         <form action="update.php" method="POST" enctype="multipart/form-data">
