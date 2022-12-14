@@ -109,9 +109,6 @@ $all_kuliner = $con->query($sql_kuliner);
 
         <!-- ======= Footer ======= -->
         <footer id="footer">
-
-
-
             <div class="container">
                 <div class="copyright">
                     &copy; Copyright <strong><span>Kelompok PWEB</span></strong>

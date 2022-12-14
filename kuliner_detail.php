@@ -117,9 +117,6 @@ $row_kuliner = mysqli_fetch_assoc($all_kuliner);
 
         <!-- ======= Footer ======= -->
         <footer id="footer">
-
-
-
             <div class="container">
                 <div class="copyright">
                     &copy; Copyright <strong><span>Kelompok PWEB</span></strong>

@@ -122,10 +122,7 @@ $row_hotel = mysqli_fetch_assoc($all_hotel);
         </section>
 
         <!-- ======= Footer ======= -->
-        <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
-
-
-
+        <footer id="footer">
             <div class="container">
                 <div class="copyright">
                     &copy; Copyright <strong><span>Kelompok PWEB</span></strong>

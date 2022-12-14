@@ -109,9 +109,6 @@ $all_destinasi = $con->query($sql_destinasi);
 
         <!-- ======= Footer ======= -->
         <footer id="footer">
-
-
-
             <div class="container">
                 <div class="copyright">
                     &copy; Copyright <strong><span>Kelompok PWEB</span></strong>
