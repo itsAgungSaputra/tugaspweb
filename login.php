@@ -69,13 +69,13 @@
 						</button>
 					</div>
 
-					<div class="text-center p-t-25">
+					<!-- <div class="text-center p-t-25">
 						<a class="txt1" href="#">
 							Forgot Password?
 						</a>
-					</div>
+					</div> -->
 
-					<div class="text-center">
+					<div class="text-center p-t-25">
 						<a class="txt1" href="register.php">
 							Register
 						</a>
