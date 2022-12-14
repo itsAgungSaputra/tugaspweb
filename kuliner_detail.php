@@ -1,12 +1,11 @@
 <?php
 require_once 'helper/connection.php';
 
-$id = $_GET['id_hotel'];
-$sql_hotel = "SELECT * FROM hotel WHERE id_hotel = $id";
+$id = $_GET['id'];
+$sql_kuliner = "SELECT * FROM kuliner WHERE id = $id";
 
-$all_hotel = $con->query($sql_hotel);
-// $result = mysqli_query($con, "SELECT * FROM hotel WHERE id_hotel = '$id_hotel'");
-$row_hotel = mysqli_fetch_assoc($all_hotel);
+$all_kuliner = $con->query($sql_kuliner);
+$row_kuliner = mysqli_fetch_assoc($all_kuliner);
 ?>
 
 <!DOCTYPE html>
@@ -56,9 +55,9 @@ $row_hotel = mysqli_fetch_assoc($all_hotel);
 
             <nav id="navbar" class="navbar">
                 <ul>
-                <li><a <?php if ($_SERVER['PHP_SELF'] == "/webwisata/index.php") { ?> class="active" <?php } ?> href="index.php">Home</a></li>
-                <li><a <?php if ($_SERVER['PHP_SELF'] == "/webwisata/destinasi.php") { ?> class="active" <?php } ?> href="destinasi.php">Destinasi</a></li>
-                <li><a <?php if ($_SERVER['PHP_SELF'] == "/webwisata/kuliner.php") { ?> class="active" <?php } ?> href="kuliner.php">Kuliner</a></li>
+                    <li><a <?php if ($_SERVER['PHP_SELF'] == "/webwisata/index.php") { ?> class="active" <?php } ?> href="index.php">Home</a></li>
+                    <li><a <?php if ($_SERVER['PHP_SELF'] == "/webwisata/destinasi.php") { ?> class="active" <?php } ?> href="destinasi.php">Destinasi</a></li>
+                    <li><a <?php if ($_SERVER['PHP_SELF'] == "/webwisata/kuliner.php") { ?> class="active" <?php } ?> href="kuliner.php">Kuliner</a></li>
 
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -74,7 +73,7 @@ $row_hotel = mysqli_fetch_assoc($all_hotel);
             <div class="container">
 
                 <div class="d-flex justify-content-between align-items-center">
-                    <h2 style="font-size: 45px;"><?= $row_hotel['nama_hotel']; ?></h2>
+                    <h2 style="font-size: 45px;"><?= $row_kuliner['nama']; ?></h2>
                 </div>
 
             </div>
@@ -87,17 +86,14 @@ $row_hotel = mysqli_fetch_assoc($all_hotel);
         <section class="service-details">
             <div class="container">
 
-                <div class="row" data-aos="fade-up">
+                <div class="row pb-4" data-aos="fade-up">
                     <div class="col-md-5">
-                        <img src="assets/img/hotel/<?= $row_hotel['foto']; ?>" class="img-fluid" alt="">
+                        <img src="assets/img/kuliner/<?= $row_kuliner['foto']; ?>" class="img-fluid" alt="">
                     </div>
                     <div class="col-md-7">
                         <p>
-                            <?= $row_hotel['deskripsi']; ?>
+                            <?= $row_kuliner['deskripsi']; ?>
                         </p>
-                        <div class="read-more pb-4" style="color: #767676;">
-                            <i class="bi bi-geo-alt"></i> <?= $row_hotel['alamat']; ?>
-                        </div>
                     </div>
                     <!-- <div class="col-md-12 d-flex align-items-stretch" data-aos="fade-up">
                         <div class="card">
@@ -120,7 +116,7 @@ $row_hotel = mysqli_fetch_assoc($all_hotel);
         </section>
 
         <!-- ======= Footer ======= -->
-        <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+        <footer id="footer">
 
 
 

@@ -9,6 +9,7 @@ $id_destinasi = $_POST['id_destinasi'];
 $nama_destinasi = $_POST['nama_destinasi'];
 $deskripsi = $_POST['deskripsi'];
 $alamat = $_POST['alamat'];
+$gmaps = $_POST['gmaps'];
 $foto = $_FILES["foto"]["name"];
 $id_kabkot = $_POST['id_kabkot'];
 
@@ -29,7 +30,7 @@ if ($foto != "") {
 			$nama_gambar_baru = $row['foto'];
 		}
 
-		$query = "UPDATE destinasi SET nama_destinasi = '$nama_destinasi', deskripsi= '$deskripsi', alamat= '$alamat', foto = '$nama_gambar_baru', id_kabkot= '$id_kabkot' ";
+		$query = "UPDATE destinasi SET nama_destinasi = '$nama_destinasi', deskripsi= '$deskripsi', alamat= '$alamat', gmaps = '$gmaps', foto = '$nama_gambar_baru', id_kabkot= '$id_kabkot' ";
 		$query .= "WHERE id_destinasi = '$id_destinasi'";
 		$result = mysqli_query($con, $query);
 
@@ -42,7 +43,7 @@ if ($foto != "") {
 		echo "<script>alert('Ekstensi gambar hanya bisa jpg, jpeg, dan png!');window.location.href='edit.php';</script>";
 	}
 } else {
-	$query = "UPDATE destinasi SET nama_destinasi = '$nama_destinasi', deskripsi= '$deskripsi', alamat= '$alamat', id_kabkot= '$id_kabkot' ";
+	$query = "UPDATE destinasi SET nama_destinasi = '$nama_destinasi', deskripsi= '$deskripsi', alamat= '$alamat', gmaps = '$gmaps', id_kabkot= '$id_kabkot' ";
 	$query .= "WHERE id_destinasi = '$id_destinasi'";
 	$result = mysqli_query($con, $query);
 

@@ -9,6 +9,7 @@ $id_hotel = $_POST['id_hotel'];
 $nama_hotel = $_POST['nama_hotel'];
 $deskripsi = $_POST['deskripsi'];
 $alamat = $_POST['alamat'];
+$gmaps = $_POST['gmaps'];
 $foto = $_FILES["foto"]["name"];
 
 if ($foto != "") {
@@ -28,7 +29,7 @@ if ($foto != "") {
 			$nama_gambar_baru = $row['foto'];
 		}
 
-		$query = "UPDATE hotel SET nama_hotel = '$nama_hotel', deskripsi= '$deskripsi', alamat= '$alamat', foto = '$nama_gambar_baru' ";
+		$query = "UPDATE hotel SET nama_hotel = '$nama_hotel', deskripsi= '$deskripsi', alamat= '$alamat', gmaps= '$gmaps', foto = '$nama_gambar_baru' ";
 		$query .= "WHERE id_hotel = '$id_hotel'";
 		$result = mysqli_query($con, $query);
 
@@ -41,7 +42,7 @@ if ($foto != "") {
 		echo "<script>alert('Ekstensi gambar hanya bisa jpg, jpeg, dan png!');window.location.href='edit.php';</script>";
 	}
 } else {
-	$query = "UPDATE hotel SET nama_hotel = '$nama_hotel', deskripsi= '$deskripsi', alamat= '$alamat' ";
+	$query = "UPDATE hotel SET nama_hotel = '$nama_hotel', deskripsi= '$deskripsi', alamat= '$alamat', gmaps= '$gmaps'";
 	$query .= "WHERE id_hotel = '$id_hotel'";
 	$result = mysqli_query($con, $query);
 

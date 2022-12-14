@@ -42,7 +42,11 @@ $row = mysqli_fetch_array($result);
                     </div>
                     <div class="form-group">
                         <label for="alamat"><strong>Alamat</strong></label>
-                        <input type="text" name="alamat" class="form-control" id="alamat" value="<?= $row['alamat'] ?>">
+                        <textarea class="form-control" id="alamat" name="alamat" rows="3"><?= $row['alamat']; ?></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="gmaps"><strong>GMaps</strong></label>
+                        <textarea class="form-control" id="gmaps" name="gmaps" rows="3"><?= $row['gmaps']; ?></textarea>
                     </div>
                     <div class="form-group">
                         <label for="foto"><strong>Foto</strong></label>

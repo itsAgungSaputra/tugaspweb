@@ -113,7 +113,7 @@ $row_destinasi = mysqli_fetch_assoc($all_destinasi);
                 </a>
               </div>
               <div class="col-md-4 pt-4">
-                <h4 class="title"><a href="kabkot_detail.php?id=<?= $row_destinasi['id_kabkot']; ?>"><?= $row['nama_kabkot']; ?></a></h4>
+                <h4 class="title"><a href="kabkot_detail.php?id=<?= $row['id_kabkot']; ?>"><?= $row['nama_kabkot']; ?></a></h4>
                 <p>
                   <?= $row['deskripsi']; ?>
                 </p>
@@ -220,7 +220,7 @@ $row_destinasi = mysqli_fetch_assoc($all_destinasi);
   </main>
 
   <!-- ======= Footer ======= -->
-  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+  <footer id="footer">
 
 
 

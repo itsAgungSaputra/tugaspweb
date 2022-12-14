@@ -37,14 +37,20 @@ $result = mysqli_query($con, "SELECT * FROM kabkot");
             <div class="form-group row">
                 <label for="alamat" class="col-sm-2 form-label"><strong>Alamat</strong></label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="alamat" id="alamat" required>
+                    <textarea class="form-control" id="alamat" name="alamat" rows="3" required></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="gmaps" class="col-sm-2 form-label"><strong>GMaps</strong></label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" id="gmaps" name="gmaps" rows="3"></textarea>
                 </div>
             </div>
             <div class="form-group row">
                 <label for="foto" class="col-sm-2 form-label"><strong>Foto</strong></label>
                 <div class="col-sm-10">
                     <input type="file" name="foto" class="form-control-file" id="foto" accept=".jpg, .jpeg, .png">
-                    
+
                 </div>
             </div>
             <div class="form-group row">

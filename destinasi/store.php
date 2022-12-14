@@ -5,6 +5,7 @@ require_once '../helper/connection.php';
 $nama_destinasi = $_POST['nama_destinasi'];
 $deskripsi = $_POST['deskripsi'];
 $alamat = $_POST['alamat'];
+$gmaps = $_POST['gmaps'];
 $foto = $_FILES["foto"]["name"];
 $id_kabkot = $_POST['id_kabkot'];
 
@@ -20,7 +21,7 @@ if ($foto != "") {
     if (in_array($ekstensi, $ekstensi_diperbolehkan)) {
         move_uploaded_file($file_tmp, '../assets/img/destinasi/' . $nama_gambar_baru);
 
-        $query = "INSERT INTO destinasi (nama_destinasi, deskripsi, alamat, foto, id_kabkot) VALUES ('$nama_destinasi', '$deskripsi', '$alamat', '$nama_gambar_baru', '$id_kabkot')";
+        $query = "INSERT INTO destinasi (nama_destinasi, deskripsi, alamat, gmaps, foto, id_kabkot) VALUES ('$nama_destinasi', '$deskripsi', '$alamat', '$gmaps', '$nama_gambar_baru', '$id_kabkot')";
         $result = mysqli_query($con, $query);
 
         if (!$result) {
@@ -32,7 +33,7 @@ if ($foto != "") {
         echo "<script>alert('Ekstensi gambar hanya bisa jpg, jpeg, dan png!');window.location.href='create.php';</script>";
     }
 } else {
-    $query = "INSERT INTO destinasi (nama_destinasi, deskripsi, alamat, id_kabkot) VALUES ('$nama_destinasi', '$deskripsi', '$alamat', '$id_kabkot')";
+    $query = "INSERT INTO destinasi (nama_destinasi, deskripsi, alamat, gmaps, id_kabkot) VALUES ('$nama_destinasi', '$deskripsi', '$alamat', '$gmaps', '$id_kabkot')";
     $result = mysqli_query($con, $query);
 
     if (!$result) {

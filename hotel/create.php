@@ -33,7 +33,13 @@ if (!isset($_SESSION['nama'])) {
             <div class="form-group row">
                 <label for="alamat" class="col-sm-2 form-label"><strong>Alamat</strong></label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="alamat" id="alamat" -required>
+                    <textarea class="form-control" name="alamat" id="alamat" rows="3" required></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="gmaps" class="col-sm-2 form-label"><strong>GMaps</strong></label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" name="gmaps" id="gmaps" rows="3"></textarea>
                 </div>
             </div>
             <div class="form-group row">

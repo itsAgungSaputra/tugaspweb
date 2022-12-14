@@ -30,6 +30,7 @@ $result = mysqli_query($con, "SELECT * FROM hotel");
                         <th>Nama Hotel</th>
                         <th>Deskripsi</th>
                         <th>Alamat</th>
+                        <th>GMaps</th>
                         <th>Foto</th>
                         <th style="width: 100px">Action</th>
                     </tr>
@@ -44,6 +45,7 @@ $result = mysqli_query($con, "SELECT * FROM hotel");
                             <td><?= $row['nama_hotel']; ?></td>
                             <td><?= $row['deskripsi']; ?></td>
                             <td><?= $row['alamat']; ?></td>
+                            <td><?= $row['gmaps']; ?></td>
                             <td>
                                 <img width="100px" src="../assets/img/hotel/<?= $row['foto']; ?>">
                             </td>

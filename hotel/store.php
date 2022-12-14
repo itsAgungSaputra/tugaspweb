@@ -5,6 +5,7 @@ require_once '../helper/connection.php';
 $nama_hotel = $_POST['nama_hotel'];
 $deskripsi = $_POST['deskripsi'];
 $alamat = $_POST['alamat'];
+$gmaps = $_POST['gmaps'];
 $foto = $_FILES["foto"]["name"];
 
 if ($foto != "") {
@@ -19,7 +20,7 @@ if ($foto != "") {
     if (in_array($ekstensi, $ekstensi_diperbolehkan)) {
         move_uploaded_file($file_tmp, '../assets/img/hotel/' . $nama_gambar_baru);
 
-        $query = "INSERT INTO hotel (nama_hotel, deskripsi, alamat, foto) VALUES ('$nama_hotel', '$deskripsi', '$alamat', '$nama_gambar_baru')";
+        $query = "INSERT INTO hotel (nama_hotel, deskripsi, alamat, gmaps, foto) VALUES ('$nama_hotel', '$deskripsi', '$alamat', '$gmaps', '$nama_gambar_baru')";
         $result = mysqli_query($con, $query);
 
         if (!$result) {
@@ -31,7 +32,7 @@ if ($foto != "") {
         echo "<script>alert('Ekstensi gambar hanya bisa jpg, jpeg, dan png!');window.location.href='create.php';</script>";
     }
 } else {
-    $query = "INSERT INTO hotel (nama_hotel, deskripsi, alamat) VALUES ('$nama_hotel', '$deskripsi', '$alamat')";
+    $query = "INSERT INTO hotel (nama_hotel, deskripsi, alamat, gmaps) VALUES ('$nama_hotel', '$deskripsi', '$alamat', '$gmaps')";
     $result = mysqli_query($con, $query);
 
     if (!$result) {

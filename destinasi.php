@@ -90,14 +90,11 @@ $all_destinasi = $con->query($sql_destinasi);
                     ?>
                         <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
                             <div class="card">
-                                <div class="card-img">
-                                    <img src="assets/img/destinasi/<?= $row['foto']; ?>" alt="...">
+                                <div class="card-img" style="height: 350px;">
+                                    <img href="destinasi_detail.php?id_destinasi=<?= $row['id_destinasi']; ?>" src="assets/img/destinasi/<?= $row['foto']; ?>" alt="...">
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title"><a href="#"><?= $row['nama_destinasi']; ?></a></h5>
-                                    <p class="card-text"><?= $row['deskripsi']; ?></p>
-                                    <div class="read-more"><a href=""><i class="bi bi-geo-alt"></i> <?= $row['alamat']; ?></a>
-                                    </div>
+                                    <h5 class="card-title"><a href="destinasi_detail.php?id_destinasi=<?= $row['id_destinasi']; ?>"><?= $row['nama_destinasi']; ?></a></h5>
                                 </div>
                             </div>
                         </div>
@@ -111,7 +108,7 @@ $all_destinasi = $con->query($sql_destinasi);
         </section>
 
         <!-- ======= Footer ======= -->
-        <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+        <footer id="footer">
 
 
 

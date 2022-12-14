@@ -10,11 +10,13 @@ $pengguna = mysqli_query($con, "SELECT COUNT(*) FROM pengguna");
 $kabkot = mysqli_query($con, "SELECT COUNT(*) FROM kabkot");
 $destinasi = mysqli_query($con, "SELECT COUNT(*) FROM destinasi");
 $hotel = mysqli_query($con, "SELECT COUNT(*) FROM hotel");
+$kuliner = mysqli_query($con, "SELECT COUNT(*) FROM kuliner");
 
 $total_pengguna = mysqli_fetch_array($pengguna)[0];
 $total_kabkot = mysqli_fetch_array($kabkot)[0];
 $total_destinasi = mysqli_fetch_array($destinasi)[0];
 $total_hotel = mysqli_fetch_array($hotel)[0];
+$total_kuliner = mysqli_fetch_array($kuliner)[0];
 ?>
 
 <?php require_once '../layouts/header.php'; ?>
@@ -105,6 +107,26 @@ $total_hotel = mysqli_fetch_array($hotel)[0];
             </div>
         </div>
     </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-secondary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">
+                            Kuliner</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                            <?= $total_kuliner ?>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-utensils fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 </div>

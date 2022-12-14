@@ -86,16 +86,15 @@ $all_kuliner = $con->query($sql_kuliner);
                 <div class="row">
                     <?php
                     $i = 0;
-                    while ($row = mysqli_fetch_assoc($all_kuliner)) {
+                    while ($row_kuliner = mysqli_fetch_assoc($all_kuliner)) {
                     ?>
                         <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
                             <div class="card">
-                                <div class="card-img">
-                                    <img src="assets/img/kuliner/<?= $row['foto']; ?>" alt="..." style="height: 75%;">
+                                <div class="card-img" style="height: 350px;">
+                                    <img href="kuliner_detail.php?id=<?= $row_kuliner['id']; ?>" src="assets/img/kuliner/<?= $row_kuliner['foto']; ?>" alt="...">
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title"><a href="#"><?= $row['nama']; ?></a></h5>
-                                    <p class="card-text"><?= $row['deskripsi']; ?></p>
+                                    <h5 class="card-title"><a href="kuliner_detail.php?id=<?= $row_kuliner['id']; ?>"><?= $row_kuliner['nama']; ?></a></h5>
                                 </div>
                             </div>
                         </div>
@@ -109,7 +108,7 @@ $all_kuliner = $con->query($sql_kuliner);
         </section>
 
         <!-- ======= Footer ======= -->
-        <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+        <footer id="footer">
 
 
 

@@ -28,8 +28,9 @@ $result = mysqli_query($con, "SELECT destinasi.*,kabkot.nama_kabkot FROM destina
                     <tr>
                         <th>No.</th>
                         <th>Nama</th>
-                        <th>Deskripsi</th>
+                        <th style="width: 450px">Deskripsi</th>
                         <th>Alamat</th>
+                        <th>GMaps</th>
                         <th>Foto</th>
                         <th>Kabupaten/Kota</th>
                         <th style="width: 100px">Action</th>
@@ -43,13 +44,14 @@ $result = mysqli_query($con, "SELECT destinasi.*,kabkot.nama_kabkot FROM destina
                         <tr>
                             <td><?= $no++; ?></td>
                             <td><?= $data['nama_destinasi']; ?></td>
-                            <td><?= $data['deskripsi']; ?></td>
+                            <td style="width: 450px"><?= $data['deskripsi']; ?></td>
                             <td><?= $data['alamat']; ?></td>
+                            <td><?= $data['gmaps']; ?></td>
                             <td>
                                 <img width="100px" src="../assets/img/destinasi/<?= $data['foto']; ?>">
                             </td>
                             <td><?= $data['nama_kabkot']; ?></td>
-                            <td>
+                            <td style="width: 100px">
                                 <a class="btn btn-warning btn-sm rounded-circle" href="edit.php?id_destinasi=<?php echo $data['id_destinasi']; ?>"><i class="fas fa-edit"></i></a>
                                 <a class="btn btn-danger btn-sm rounded-circle" href="delete.php?id_destinasi=<?php echo $data['id_destinasi']; ?>" onclick="return confirm('Ingin Menghapus Data Ini?')"><i class="fas fa-trash"></i></a>
                             </td>
