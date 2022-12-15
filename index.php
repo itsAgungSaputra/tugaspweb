@@ -102,12 +102,12 @@ $row_destinasi = mysqli_fetch_assoc($all_destinasi);
           $i = 0;
           while ($row = mysqli_fetch_assoc($all_kabkot)) {
           ?>
-            <div class="row justify-content-center" data-aos="fade-up">
-              <div class="col-md-4 <?php if ($i % 2 === 0) : ?>order-1 order-md-2<?php endif; ?>" style="<?php if ($i % 2 === 0) : ?>margin-left: 150px;<?php endif; ?>">
+            <div class="row justify-content-center" style="column-gap: 100px;" data-aos="fade-up">
+              <div class="col-md-4 <?php if ($i % 2 === 0) : ?>order-0 order-md-1<?php endif; ?>">
                 <a href="kabkot_detail.php?id=<?= $row['id_kabkot']; ?>">
                   <div class="stack">
-                    <img src="assets/img/kabkot/<?= $row['foto']; ?>" class="img-fluid" alt="">
-                    <img src="assets/img/kabkot/<?= $row['foto']; ?>" class="img-fluid" alt="">
+                    <img class="d-md-block d-none" src="assets/img/kabkot/<?= $row['foto']; ?>" class="img-fluid" alt="">
+                    <img class="d-md-block d-none" src="assets/img/kabkot/<?= $row['foto']; ?>" class="img-fluid" alt="">
                     <img src="assets/img/kabkot/<?= $row['foto']; ?>" class="img-fluid" alt="">
                   </div>
                 </a>
@@ -249,3 +249,4 @@ $row_destinasi = mysqli_fetch_assoc($all_destinasi);
 </body>
 
 </html>
+

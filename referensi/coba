@@ -1,0 +1,1 @@
+ style="<?php if ($i % 2 === 0) : ?>gap: 150px;<?php endif; ?>"
